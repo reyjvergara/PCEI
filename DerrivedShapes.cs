@@ -4,7 +4,7 @@ namespace Models;
 // lets assume that we know that our program will know what object to create
 public class Circle : Shapes
 {
-    private decimal Pi = 3.14M;
+    private double Pi = 3.14;
     public Circle(int radius)
     {
         setName();
@@ -19,7 +19,7 @@ public class Circle : Shapes
 
     protected void calculatePerimeter(int radius)
     {
-        perimeter = 2.00M * Pi * radius;
+        perimeter = 2.0 * Pi * radius;
     }
 
     protected void calculateSurfaceArea(int radius)
@@ -57,8 +57,9 @@ class Triangle : Shapes
 
     protected void calculateSurfaceArea(int a, int b, int c)
     {
-        double temp = (a + b + c) / 2;
-        surfaceArea = (decimal)(  Math.Sqrt( temp * (temp - a) * (temp - b) * (temp - c) )  );
+        double temp = (a + b + c) / 2.0;
+        // It broke for equilateral triangles
+        surfaceArea = Math.Sqrt( temp * (temp - a) * (temp - b) * (temp - c) );
     }
 }
 
@@ -74,15 +75,41 @@ class Quadrilateral : Shapes
     
     protected void calculatePerimeter(int width, int length)
     {
-        perimeter = (width * length) * 2.00M;
+        perimeter = (width * length) * 2.0;
     }
 
     protected void calculateSurfaceArea(int width, int length)
     {
-        surfaceArea = (decimal)(width * length);
+        surfaceArea = (double)(width * length);
     }
 }
 
+
+class GenericGetter
+{
+    public double surfaceArea;
+    public string name;
+    public double perimeter;
+
+    public GenericGetter(Quadrilateral x)
+    {
+        perimeter = x.getPerimeter();
+        name = x.getShapeName();
+        surfaceArea = x.getSurfaceArea();
+    }
+    public GenericGetter(Triangle x)
+    {
+        perimeter = x.getPerimeter();
+        name = x.getShapeName();
+        surfaceArea = x.getSurfaceArea();
+    }
+    public GenericGetter(Circle x)
+    {
+        perimeter = x.getPerimeter();
+        name = x.getShapeName();
+        surfaceArea = x.getSurfaceArea();
+    }
+}
 /*
 not needed
 class Rectangle : Shapes

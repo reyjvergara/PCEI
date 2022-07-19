@@ -4,9 +4,9 @@ public abstract class Shapes
 {
     protected string shapeName = "Shapes";
     // using decimal to 2 points since Pi is already 3.14 only
-    protected decimal perimeter;
+    protected double perimeter;
 
-    protected decimal surfaceArea;
+    protected double surfaceArea;
 
     // Writing these down, though I'm sure I should call these methods in a constructor instead of here
     // since a constructor will actually define them all given their input
@@ -18,12 +18,12 @@ public abstract class Shapes
 
     virtual protected void calculatePerimeter()
     {
-        perimeter = 0.00M;
+        perimeter = 0;
     }
 
     virtual protected void calculateSurfaceArea()
     {
-        surfaceArea = 0.00M;
+        surfaceArea = 0;
     }
 
     public string getShapeName()
@@ -31,12 +31,12 @@ public abstract class Shapes
         return shapeName;
     }
 
-    public decimal getPerimeter()
+    public double getPerimeter()
     {
         return perimeter;
     }
 
-    public decimal getSurfaceArea()
+    public double getSurfaceArea()
     {
         return surfaceArea;
     }
