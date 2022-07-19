@@ -1,0 +1,15 @@
+D:\Daily Coding\c#\Interview\bin\Debug\net6.0\Interview.exe
+D:\Daily Coding\c#\Interview\bin\Debug\net6.0\Interview.deps.json
+D:\Daily Coding\c#\Interview\bin\Debug\net6.0\Interview.runtimeconfig.json
+D:\Daily Coding\c#\Interview\bin\Debug\net6.0\Interview.dll
+D:\Daily Coding\c#\Interview\bin\Debug\net6.0\Interview.pdb
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.csproj.AssemblyReference.cache
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.GeneratedMSBuildEditorConfig.editorconfig
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.AssemblyInfoInputs.cache
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.AssemblyInfo.cs
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.csproj.CoreCompileInputs.cache
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.dll
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\refint\Interview.dll
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.pdb
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\Interview.genruntimeconfig.cache
+D:\Daily Coding\c#\Interview\obj\Debug\net6.0\ref\Interview.dll
