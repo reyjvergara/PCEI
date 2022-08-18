@@ -3,7 +3,7 @@ namespace Models;
 public abstract class Shapes
 {
     protected string shapeName = "Shapes";
-    // using decimal to 2 points since Pi is already 3.14 only
+    // using a double to reduce the amount of conversions needed
     protected double perimeter;
 
     protected double surfaceArea;
