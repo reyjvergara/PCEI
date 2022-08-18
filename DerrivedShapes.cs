@@ -57,9 +57,9 @@ class Triangle : Shapes
 
     protected void calculateSurfaceArea(int a, int b, int c)
     {
-        double temp = (a + b + c) / 2.0;
+        double s = (a + b + c) / 2.0;
         // It broke for equilateral triangles
-        surfaceArea = Math.Sqrt( temp * (temp - a) * (temp - b) * (temp - c) );
+        surfaceArea = Math.Pow( (s * (s - a) * (s - b) * (s - c)), 0.5 );
     }
 }
 
@@ -85,30 +85,32 @@ class Quadrilateral : Shapes
 }
 
 
-class GenericGetter
+class ShapeHolder
 {
-    public double surfaceArea;
+    public decimal surfaceArea;
     public string name;
-    public double perimeter;
+    public decimal perimeter;
 
-    public GenericGetter(Quadrilateral x)
+    public ShapeHolder(Quadrilateral x)
     {
-        perimeter = x.getPerimeter();
+        perimeter = Math.Round((decimal)x.getPerimeter(), 4);
         name = x.getShapeName();
-        surfaceArea = x.getSurfaceArea();
+        surfaceArea = Math.Round((decimal)x.getSurfaceArea(), 4);
     }
-    public GenericGetter(Triangle x)
+    public ShapeHolder(Triangle x)
     {
-        perimeter = x.getPerimeter();
+        perimeter = Math.Round((decimal)x.getPerimeter(), 4);
         name = x.getShapeName();
-        surfaceArea = x.getSurfaceArea();
+        surfaceArea = Math.Round((decimal)x.getSurfaceArea(), 4);
     }
-    public GenericGetter(Circle x)
+    public ShapeHolder(Circle x)
     {
-        perimeter = x.getPerimeter();
+        perimeter = Math.Round((decimal)x.getPerimeter(), 4);
         name = x.getShapeName();
-        surfaceArea = x.getSurfaceArea();
+        surfaceArea = Math.Round((decimal)x.getSurfaceArea(), 4);
     }
+
+    public static decimal operator+(ShapeHolder x, ShapeHolder y) => Math.Round((x.perimeter + y.perimeter), 4);
 }
 /*
 not needed
